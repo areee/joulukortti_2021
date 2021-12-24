@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -22,15 +23,36 @@ class MyRiveAnimation extends StatelessWidget {
           Center(
             child: SizedBox(
               width: 500,
-              child: Text(
-                'Hyvää joulua ja onnellista uutta vuotta 2022!',
-                textAlign: TextAlign.center,
-                style: GoogleFonts.pacifico(
-                    textStyle: const TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.red,
-                )),
+              child: AnimatedTextKit(
+                animatedTexts: [
+                  TyperAnimatedText(
+                    'Hyvää joulua',
+                    textAlign: TextAlign.center,
+                    textStyle: GoogleFonts.pacifico(
+                        textStyle: const TextStyle(
+                      fontSize: 40,
+                      color: Colors.red,
+                    )),
+                  ),
+                  TyperAnimatedText(
+                    'ja',
+                    textAlign: TextAlign.center,
+                    textStyle: GoogleFonts.pacifico(
+                        textStyle: const TextStyle(
+                      fontSize: 40,
+                      color: Colors.red,
+                    )),
+                  ),
+                  TyperAnimatedText(
+                    'onnellista uutta vuotta 2022!',
+                    textAlign: TextAlign.center,
+                    textStyle: GoogleFonts.pacifico(
+                        textStyle: const TextStyle(
+                      fontSize: 40,
+                      color: Colors.red,
+                    )),
+                  ),
+                ],
               ),
             ),
           ),
