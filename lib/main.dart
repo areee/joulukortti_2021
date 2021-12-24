@@ -1,66 +1,73 @@
 import 'package:flutter/material.dart';
+import 'package:rive/rive.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyRiveAnimation(),
+    ));
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Joulukortti 2021',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Joulukortti 2021'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+class MyRiveAnimation extends StatelessWidget {
+  const MyRiveAnimation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+      body: Stack(
+        children: <Widget>[
+          const RiveAnimation.asset(
+            'assets/joulukortti_2021.riv',
+            fit: BoxFit.cover,
+          ),
+          Center(
+            child: SizedBox(
+              width: 500,
+              child: Text(
+                'Hyvää joulua ja onnellista uutta vuotta 2022!',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.pacifico(
+                  textStyle: const TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red,
+                  ),
+                ),
+              ),
+              // AnimatedTextKit(
+              //   animatedTexts: [
+              //     TyperAnimatedText(
+              //       'Hyvää joulua',
+              //       textAlign: TextAlign.center,
+              //       textStyle: GoogleFonts.pacifico(
+              //           textStyle: const TextStyle(
+              //         fontSize: 40,
+              //         color: Colors.red,
+              //       )),
+              //     ),
+              //     TyperAnimatedText(
+              //       'ja',
+              //       textAlign: TextAlign.center,
+              //       textStyle: GoogleFonts.pacifico(
+              //           textStyle: const TextStyle(
+              //         fontSize: 40,
+              //         color: Colors.red,
+              //       )),
+              //     ),
+              //     TyperAnimatedText(
+              //       'onnellista uutta vuotta 2022!',
+              //       textAlign: TextAlign.center,
+              //       textStyle: GoogleFonts.pacifico(
+              //           textStyle: const TextStyle(
+              //         fontSize: 40,
+              //         color: Colors.red,
+              //       )),
+              //     ),
+              //   ],
+              // ),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+          ),
+        ],
       ),
     );
   }
