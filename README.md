@@ -1,6 +1,6 @@
 # joulukortti_2021
 
-A new Flutter project.
+A lightly animated christmas card for year 2021 made with Flutter and Rive.
 
 ## Getting Started
 
