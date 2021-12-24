@@ -23,37 +23,48 @@ class MyRiveAnimation extends StatelessWidget {
           Center(
             child: SizedBox(
               width: 500,
-              child: AnimatedTextKit(
-                animatedTexts: [
-                  TyperAnimatedText(
-                    'Hyvää joulua',
-                    textAlign: TextAlign.center,
-                    textStyle: GoogleFonts.pacifico(
-                        textStyle: const TextStyle(
-                      fontSize: 40,
-                      color: Colors.red,
-                    )),
+              child: Text(
+                'Hyvää joulua ja onnellista uutta vuotta 2022!',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.pacifico(
+                  textStyle: const TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red,
                   ),
-                  TyperAnimatedText(
-                    'ja',
-                    textAlign: TextAlign.center,
-                    textStyle: GoogleFonts.pacifico(
-                        textStyle: const TextStyle(
-                      fontSize: 40,
-                      color: Colors.red,
-                    )),
-                  ),
-                  TyperAnimatedText(
-                    'onnellista uutta vuotta 2022!',
-                    textAlign: TextAlign.center,
-                    textStyle: GoogleFonts.pacifico(
-                        textStyle: const TextStyle(
-                      fontSize: 40,
-                      color: Colors.red,
-                    )),
-                  ),
-                ],
+                ),
               ),
+              // AnimatedTextKit(
+              //   animatedTexts: [
+              //     TyperAnimatedText(
+              //       'Hyvää joulua',
+              //       textAlign: TextAlign.center,
+              //       textStyle: GoogleFonts.pacifico(
+              //           textStyle: const TextStyle(
+              //         fontSize: 40,
+              //         color: Colors.red,
+              //       )),
+              //     ),
+              //     TyperAnimatedText(
+              //       'ja',
+              //       textAlign: TextAlign.center,
+              //       textStyle: GoogleFonts.pacifico(
+              //           textStyle: const TextStyle(
+              //         fontSize: 40,
+              //         color: Colors.red,
+              //       )),
+              //     ),
+              //     TyperAnimatedText(
+              //       'onnellista uutta vuotta 2022!',
+              //       textAlign: TextAlign.center,
+              //       textStyle: GoogleFonts.pacifico(
+              //           textStyle: const TextStyle(
+              //         fontSize: 40,
+              //         color: Colors.red,
+              //       )),
+              //     ),
+              //   ],
+              // ),
             ),
           ),
         ],
