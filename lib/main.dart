@@ -3,12 +3,13 @@ import 'package:rive/rive.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-void main() => runApp(const MaterialApp(
-      title: 'Joulukortti 2021',
+void main() => runApp(MaterialApp(
+      onGenerateTitle: (BuildContext context) =>
+          AppLocalizations.of(context)!.title,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       debugShowCheckedModeBanner: false,
-      home: MyRiveAnimation(),
+      home: const MyRiveAnimation(),
     ));
 
 class MyRiveAnimation extends StatelessWidget {
