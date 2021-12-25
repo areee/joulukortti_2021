@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 
 void main() => runApp(const MaterialApp(
+      title: 'Joulukortti 2021',
       debugShowCheckedModeBanner: false,
       home: MyRiveAnimation(),
     ));
@@ -34,37 +34,6 @@ class MyRiveAnimation extends StatelessWidget {
                   ),
                 ),
               ),
-              // AnimatedTextKit(
-              //   animatedTexts: [
-              //     TyperAnimatedText(
-              //       'Hyvää joulua',
-              //       textAlign: TextAlign.center,
-              //       textStyle: GoogleFonts.pacifico(
-              //           textStyle: const TextStyle(
-              //         fontSize: 40,
-              //         color: Colors.red,
-              //       )),
-              //     ),
-              //     TyperAnimatedText(
-              //       'ja',
-              //       textAlign: TextAlign.center,
-              //       textStyle: GoogleFonts.pacifico(
-              //           textStyle: const TextStyle(
-              //         fontSize: 40,
-              //         color: Colors.red,
-              //       )),
-              //     ),
-              //     TyperAnimatedText(
-              //       'onnellista uutta vuotta 2022!',
-              //       textAlign: TextAlign.center,
-              //       textStyle: GoogleFonts.pacifico(
-              //           textStyle: const TextStyle(
-              //         fontSize: 40,
-              //         color: Colors.red,
-              //       )),
-              //     ),
-              //   ],
-              // ),
             ),
           ),
         ],
