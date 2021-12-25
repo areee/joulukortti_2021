@@ -1,0 +1,6 @@
+{
+    "greetingText": "Merry Christmas And a Happy New Year 2022!",
+    "@greetingText": {
+      "description": "The greeting about upcoming christmas and a new year"
+    }
+}

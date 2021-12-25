@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() => runApp(const MaterialApp(
       title: 'Joulukortti 2021',
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       debugShowCheckedModeBanner: false,
       home: MyRiveAnimation(),
     ));
@@ -24,7 +27,7 @@ class MyRiveAnimation extends StatelessWidget {
             child: SizedBox(
               width: 500,
               child: Text(
-                'Hyvää joulua ja onnellista uutta vuotta 2022!',
+                AppLocalizations.of(context)!.greetingText,
                 textAlign: TextAlign.center,
                 style: GoogleFonts.pacifico(
                   textStyle: const TextStyle(
